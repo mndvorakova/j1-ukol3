@@ -12,14 +12,13 @@ public class HlavniProgram {
         System.out.println("Program spuštěn.");
 
         Disk disk = new Disk();
-        disk.setKapacita(-1);
-        //disk.setKapacita(100_000);
-        System.out.println(disk.getKapacita());
+        disk.setKapacita(1_000_000_000L);
+        disk.setVyuziteMisto(1_000_000_000L);
+        //disk.setKapacita(-100);
+        System.out.println(disk);
 
 
     }
-
-
 
 
 }
