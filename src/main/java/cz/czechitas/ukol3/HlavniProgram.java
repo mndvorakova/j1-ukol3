@@ -52,10 +52,17 @@ public class HlavniProgram {
         mujPC.vytvorSouborOVelikosti(100_000_000L); //100 MB
         System.out.println(mujPC);
 
+        //Překročení kapacity disku
+        mujPC.vytvorSouborOVelikosti(2_000_000_000L);
+        System.out.println(mujPC);
+
+        //Vymazání souboru (200 MB)
+        mujPC.vymazSouboryOVelikosti(200_000_000L);
+        System.out.println(mujPC);
+
 
         mujPC.vypniSe();
         System.out.println(mujPC);
-
 
 
 

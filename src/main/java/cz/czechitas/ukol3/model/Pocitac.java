@@ -47,6 +47,10 @@ public class Pocitac {
     }
 
     public void vytvorSouborOVelikosti(long velikost)  {
+        if (!jeZapnuty) {
+            System.out.println("PC není zapnutý");
+            return;
+        }
         if (pevnyDisk != null) {
             pevnyDisk.vytvorSouborOVelikosti(velikost);
         }
