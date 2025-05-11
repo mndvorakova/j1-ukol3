@@ -12,7 +12,7 @@ public class Disk {
     }
 
     public void setKapacita(long kapacita) {
-        if (kapacita < 0) {
+        if (kapacita <= 0) {
             System.err.println("Tvůj  počítač nemůže nemít žádnou kapacitu");
             return;
         }
@@ -27,10 +27,12 @@ public class Disk {
     public void setVyuziteMisto(long vyuziteMisto) {
         if (vyuziteMisto > kapacita) {
             System.err.println("Kapacita disku je plná!");
+            return;
 
         }
         if (vyuziteMisto < 0) {
             System.err.println("Využité místo nemůže být záporné");
+            return;
         }
         this.vyuziteMisto = vyuziteMisto;
     }
@@ -39,7 +41,7 @@ public class Disk {
     //metoda toString
     @Override
     public String toString() {
-        return "Disk: kapacita = " + kapacita + " B, využité místo = " + vyuziteMisto + " B";
+        return "Disk: kapacita: " + kapacita + " B, využité místo: " + vyuziteMisto + " B";
     }
 
 }
