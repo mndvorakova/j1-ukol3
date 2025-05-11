@@ -46,6 +46,18 @@ public class Pocitac {
         this.pevnyDisk = pevnyDisk;
     }
 
+    public void vytvorSouborOVelikosti(long velikost)  {
+        if (pevnyDisk != null) {
+            pevnyDisk.vytvorSouborOVelikosti(velikost);
+        }
+    }
+
+    public void vymazSouboryOVelikosti(long velikost){
+        if (pevnyDisk != null) {
+            pevnyDisk.vymazSouboryOVelikosti(velikost);
+        }
+    }
+
     @Override
     public String toString() {
 

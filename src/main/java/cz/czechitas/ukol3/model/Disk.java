@@ -37,6 +37,25 @@ public class Disk {
         this.vyuziteMisto = vyuziteMisto;
     }
 
+    //metoda pro vytvoření souboru
+    public void vytvorSouborOVelikosti(long velikost) {
+        if (this.vyuziteMisto + velikost <= kapacita) {
+            setVyuziteMisto(this.vyuziteMisto + velikost);
+        } else {
+            System.err.println("Na disk se nevejde soubor  o velikosti " + velikost + " kapacita");
+        }
+    }
+
+    public void vymazSouboryOVelikosti(long velikost) {
+        if (this.vyuziteMisto - velikost >= 0) {
+            setVyuziteMisto(this.vyuziteMisto - velikost);  // Zmenšení využitého místa
+        } else {
+            System.err.println("Využité místo nemůže být záporné");
+        }
+    }
+
+
+
 
     //metoda toString
     @Override

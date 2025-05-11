@@ -35,7 +35,7 @@ public class HlavniProgram {
         Disk disk = new Disk();
         disk.setKapacita(1_000_000_000L);
         disk.setVyuziteMisto(200_000_000L);
-        disk.setVyuziteMisto(-1);
+        //disk.setVyuziteMisto(-1);
         //disk.setKapacita(-100);
         System.out.println(disk);
 
@@ -47,8 +47,16 @@ public class HlavniProgram {
         mujPC.zapniSe();
         System.out.println(mujPC);
 
+
+        //přidáme soubor
+        mujPC.vytvorSouborOVelikosti(100_000_000L); //100 MB
+        System.out.println(mujPC);
+
+
         mujPC.vypniSe();
         System.out.println(mujPC);
+
+
 
 
     }
